@@ -75,7 +75,6 @@ $(document).ready(function() {
       });
     };
 
-    require(['sparkline'], function() {
       $('[data-sparkline]').each(function() {
         let $chart = $(this);
 
@@ -83,12 +82,10 @@ $(document).ready(function() {
           color: $chart.attr('data-sparkline-color')
         });
       });
-    });
   }
 
   /**  */
   if ($('.chart-circle').length) {
-    require(['circle-progress'], function() {
       $('.chart-circle').each(function() {
         let $this = $(this);
 
@@ -102,6 +99,5 @@ $(document).ready(function() {
           lineCap: 'round'
         });
       });
-    });
   }
 });

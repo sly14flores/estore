@@ -14,12 +14,21 @@
     <meta name="MobileOptimized" content="320">
     <link rel="icon" href="./favicon.ico" type="image/x-icon"/>
     <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
-    <!-- Generated: 2018-04-06 16:27:42 +0200 -->
     <title>eStore</title>
     <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">
     <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext"> -->
     <!-- Dashboard Core -->
     <link href="./assets/css/dashboard.css" rel="stylesheet" />
+    <script src="./assets/js/vendors/jquery-3.2.1.min.js"></script>
+    <script src="./assets/js/vendors/jquery.sparkline.min.js"></script>	
+    <script src="./assets/js/vendors/jquery.tablesorter.min.js"></script>
+    <script src="./assets/js/vendors/jquery-jvectormap-2.0.3.min.js"></script>
+    <script src="./assets/js/vendors/jquery-jvectormap-de-merc.js"></script>
+    <script src="./assets/js/vendors/jquery-jvectormap-world-mill.js"></script>	
+    <script src="./assets/js/vendors/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/vendors/selectize.min.js"></script>
+    <script src="./assets/js/vendors/circle-progress.min.js"></script>
+    <script src="./assets/js/core.js"></script>	
     <script src="./assets/js/dashboard.js"></script>
     <!-- c3.js Charts Plugin -->
     <link href="./assets/plugins/charts-c3/plugin.css" rel="stylesheet" />
@@ -27,7 +36,7 @@
     <script src="./assets/plugins/charts-c3/js/d3.v3.min.js"></script>
     <!-- Input Mask Plugin -->
     <script src="./assets/plugins/input-mask/js/jquery.mask.min.js"></script>
-	
+
 	<!-- dependencies -->
 	<!-- <script src="assets/plugins/bootbox/bootbox.min.js"></script> -->
 	<!-- <script src="assets/plugins/growl/jquery.bootstrap-growl.min.js"></script> -->
@@ -332,7 +341,7 @@
                   </div>
                 </div>
                 <script>
-                  require(['c3', 'jquery'], function(c3, $) {
+
                   	$(document).ready(function(){
                   		var chart = c3.generate({
                   			bindto: '#chart-development-activity', // id of chart wrapper
@@ -398,7 +407,7 @@
                   			}
                   		});
                   	});
-                  });
+
                 </script>
               </div>
               <div class="col-md-6">
@@ -414,7 +423,7 @@
                       </div>
                     </div>
                     <script>
-                      require(['c3', 'jquery'], function(c3, $) {
+
                       	$(document).ready(function(){
                       		var chart = c3.generate({
                       			bindto: '#chart-donut', // id of chart wrapper
@@ -446,7 +455,7 @@
                       			},
                       		});
                       	});
-                      });
+
                     </script>
                   </div>
                   <div class="col-sm-6">
@@ -459,7 +468,7 @@
                       </div>
                     </div>
                     <script>
-                      require(['c3', 'jquery'], function(c3, $) {
+
                       	$(document).ready(function(){
                       		var chart = c3.generate({
                       			bindto: '#chart-pie', // id of chart wrapper
@@ -497,7 +506,7 @@
                       			},
                       		});
                       	});
-                      });
+
                     </script>
                   </div>
                   <div class="col-sm-4">
@@ -1317,7 +1326,7 @@
                       </div>
                     </div>
                     <script>
-                      require(['c3', 'jquery'], function (c3, $) {
+
                       	$(document).ready(function() {
                       		var chart = c3.generate({
                       			bindto: '#chart-bg-users-1',
@@ -1374,7 +1383,7 @@
                       			}
                       		});
                       	});
-                      });
+
                     </script>
                   </div>
                   <div class="col-sm-6 col-lg-3">
@@ -1389,7 +1398,7 @@
                       </div>
                     </div>
                     <script>
-                      require(['c3', 'jquery'], function (c3, $) {
+
                       	$(document).ready(function() {
                       		var chart = c3.generate({
                       			bindto: '#chart-bg-users-2',
@@ -1446,7 +1455,7 @@
                       			}
                       		});
                       	});
-                      });
+
                     </script>
                   </div>
                   <div class="col-sm-6 col-lg-3">
@@ -1461,7 +1470,7 @@
                       </div>
                     </div>
                     <script>
-                      require(['c3', 'jquery'], function (c3, $) {
+
                       	$(document).ready(function() {
                       		var chart = c3.generate({
                       			bindto: '#chart-bg-users-3',
@@ -1518,7 +1527,7 @@
                       			}
                       		});
                       	});
-                      });
+
                     </script>
                   </div>
                   <div class="col-sm-6 col-lg-3">
@@ -1533,7 +1542,7 @@
                       </div>
                     </div>
                     <script>
-                      require(['c3', 'jquery'], function (c3, $) {
+
                       	$(document).ready(function() {
                       		var chart = c3.generate({
                       			bindto: '#chart-bg-users-4',
@@ -1590,7 +1599,7 @@
                       			}
                       		});
                       	});
-                      });
+
                     </script>
                   </div>
                 </div>
