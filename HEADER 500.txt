@@ -1,0 +1,1 @@
+header('X-Error-Message: Session timeout', true, 500);
