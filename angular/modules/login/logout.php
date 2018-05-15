@@ -6,6 +6,6 @@ if (isset($_SESSION['id'])) unset($_SESSION['id']);
 
 echo "Logout Successful";
 
-header("location: ../index.html");
+header("location: ../../../login.html");
 
 ?>

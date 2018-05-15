@@ -6,7 +6,7 @@ angular.module('login-module', []).service('loginService', function($http, $wind
 
 		$http({
 		  method: 'POST',
-		  url: 'handlers/login.php',
+		  url: 'angular/modules/login/login.php',
 		  data: scope.account
 		}).then(function mySucces(response) {
 
@@ -16,12 +16,23 @@ angular.module('login-module', []).service('loginService', function($http, $wind
 			} else {
 				scope.views.incorrect = true;
 			}
-			
+
 		},
 		function myError(response) {
 
 		});
 		
 	};
+	
+});
+
+var app = angular.module('login',['login-module']);
+
+app.controller('loginCtrl',function($scope,loginService) {
+	
+	$scope.views = {};
+	$scope.account = {};
+	
+	$scope.login = loginService.login;	
 	
 });

@@ -38,26 +38,28 @@
     <script src="./assets/plugins/input-mask/js/jquery.mask.min.js"></script>
 
 	<!-- dependencies -->
-	<!-- <script src="assets/plugins/bootbox/bootbox.min.js"></script> -->
-	<!-- <script src="assets/plugins/growl/jquery.bootstrap-growl.min.js"></script> -->
-	<!-- <script src="assets/plugins/blockui/jquery.blockUI.js"></script>	 -->
-	
+	<link rel="stylesheet" href="angular/modules/bootbox/bs4-fix.css">	
+	<script src="angular/modules/bootbox/bootbox.min.js"></script>
+	<script src="angular/modules/growl/jquery.bootstrap-growl.min.js"></script>
+	<script src="angular/modules/blockui/jquery.blockUI.js"></script>	
+
 	<!-- angular -->	
-	<!-- <script src="angular/angular.min.js"></script> -->
-	<!-- <script src="angular/angular-route.min.js"></script> -->
-	<!-- <script src="angular/angular-sanitize.min.js"></script>	 -->
-	<!-- <script src="angular/ui-bootstrap-tpls-3.0.2.min.js"></script> -->
+	<script src="angular/angular.min.js"></script>
+	<script src="angular/angular-route.min.js"></script>
+	<script src="angular/angular-sanitize.min.js"></script>	
+	<script src="angular/ui-bootstrap-tpls-3.0.2.min.js"></script>
 
 	<!-- modules -->
-	<!-- <script src="modules/bootstrap-modal.js"></script> -->
-	<!-- <script src="modules/growl.js"></script> -->
-	<!-- <script src="modules/account.js"></script> -->
-	<!-- <script src="modules/notifications.js"></script> -->
-	<!-- <script src="modules/dashboard.js"></script> -->
+	<script src="angular/modules/bootbox/bootstrap-modal.js"></script>
+	<script src="angular/modules/growl/growl.js"></script>
+	<script src="angular/modules/blockui/blockui.js"></script>
+	<script src="angular/modules/account/account.js"></script>
+	<script src="modules/dashboard.js"></script>
+
 	<!-- controller -->
-	<!-- <script src="controllers/dashboard.js"></script>	 -->
+	<script src="controllers/dashboard.js"></script>	
   </head>
-  <body class="">
+  <body class="" ng-app="dashboard" ng-controller="dashboardCtrl" account-profile>
     <div class="page">
       <div class="page-main">
         <div class="header py-4">
@@ -103,34 +105,13 @@
                 </div>
                 <div class="dropdown">
                   <a href="#" class="nav-link pr-0 leading-none" data-toggle="dropdown">
-                    <span class="avatar" style="background-image: url(./demo/faces/female/25.jpg)"></span>
+                    <span class="avatar" style="background-image: url({{profile.picture}})"></span>
                     <span class="ml-2 d-none d-lg-block">
-                      <span class="text-default">Jane Pearson</span>
-                      <small class="text-muted d-block mt-1">Administrator</small>
+                      <span class="text-default">{{profile.fullname}}</span>
+                      <small class="text-muted d-block mt-1">{{profile.group}}</small>
                     </span>
                   </a>
-                  <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                    <a class="dropdown-item" href="#">
-                      <i class="dropdown-icon fe fe-user"></i> Profile
-                    </a>
-                    <a class="dropdown-item" href="#">
-                      <i class="dropdown-icon fe fe-settings"></i> Settings
-                    </a>
-                    <a class="dropdown-item" href="#">
-                      <span class="float-right"><span class="badge badge-primary">6</span></span>
-                      <i class="dropdown-icon fe fe-mail"></i> Inbox
-                    </a>
-                    <a class="dropdown-item" href="#">
-                      <i class="dropdown-icon fe fe-send"></i> Message
-                    </a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">
-                      <i class="dropdown-icon fe fe-help-circle"></i> Need help?
-                    </a>
-                    <a class="dropdown-item" href="#">
-                      <i class="dropdown-icon fe fe-log-out"></i> Sign out
-                    </a>
-                  </div>
+                  <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow" drop-down></div>
                 </div>
               </div>
               <a href="#" class="header-toggler d-lg-none ml-3 ml-lg-0" data-toggle="collapse" data-target="#headerMenuCollapse">
